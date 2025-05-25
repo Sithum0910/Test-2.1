@@ -1,0 +1,112 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cake Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fff;
+      --text: #222;
+      --accent: #f48fb1;
+      --card: #f9f9f9;
+    }
+    [data-theme="dark"] {
+      --bg: #121212;
+      --text: #eee;
+      --accent: #ff80ab;
+      --card: #1e1e1e;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: 0.3s;
+    }
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: var(--accent);
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .toggle {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .section {
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .card {
+      background: var(--card);
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle" onclick="toggleTheme()">Toggle Theme</button>
+  <header>My Cake Creations</header>  <section class="section">
+    <div class="card">
+      <h2>About Us</h2>
+      <p>Welcome to our cake business! We create custom cakes for birthdays, weddings, and all your sweet moments. Made with love and the finest ingredients.</p>
+    </div>
+  </section>  <section class="section">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="images/cake1.jpg" alt="Cake 1">
+      <img src="images/cake2.jpg" alt="Cake 2">
+      <img src="images/cake3.jpg" alt="Cake 3">
+      <img src="images/cake4.jpg" alt="Cake 4">
+    </div>
+  </section>  <section class="section">
+    <div class="card">
+      <h2>Contact</h2>
+      <p>Phone: <a href="tel:+94771234567">+94 77 123 4567</a></p>
+      <p>WhatsApp: <a href="https://wa.me/94771234567">Chat Now</a></p>
+      <p>Email: <a href="mailto:cakes@example.com">cakes@example.com</a></p>
+    </div>
+  </section>  <footer>
+    &copy; 2025 My Cake Creations | Hosted on <a href="https://github.com">GitHub Pages</a>
+  </footer>  <script>
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute("data-theme");
+      document.documentElement.setAttribute("data-theme", current === "dark" ? "light" : "dark");
+    }
+  </script></body>
+</html>
